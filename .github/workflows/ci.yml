@@ -38,4 +38,4 @@ jobs:
           key: ${{ secrets.AWS_SERVER_PRIVATE_KEY }} 
           script: |
            cd /var/www/html/Node-Test
-           sudo pm2 restart all
+           sudo pm2 start index.js
