@@ -37,11 +37,5 @@ jobs:
           username: ${{ secrets.AWS_SERVER_USERNAME }}
           key: ${{ secrets.AWS_SERVER_PRIVATE_KEY }} 
           script: |
-            export PATH=$PATH:/usr/local/bin
-            sudo npm install -g pm2
-            cd /var/www/html/Node-Test
-            if pm2 list | grep -q "Node-Test"; then
-              sudo pm2 restart Node-Test
-            else
-              sudo pm2 start app.js --name "Node-Test"
-            fi
+           cd /var/www/html/Node-Test
+           sudo pm2 restart all
