@@ -36,6 +36,6 @@ jobs:
           host: ${{ secrets.AWS_SERVER_IP  }}
           username: ${{ secrets.AWS_SERVER_USERNAME }}
           key: ${{ secrets.AWS_SERVER_PRIVATE_KEY }} 
-          script: 
+          script: |
             cd /var/www/html/Node-Test
-            pm2 restart all 
+            sudo pm2 restart all 
