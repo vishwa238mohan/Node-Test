@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.AWS_SERVER_USERNAME }}
           key: ${{ secrets.AWS_SERVER_PRIVATE_KEY }}
           source: "."  
-          target: "/var/www/html/Node-Test"    # Target directory on GCP VM
+          target: "/var/www/html/Node-Test"    # Target directory on AWS VM
              
       - name: starting Listening on 3000
         uses: appleboy/ssh-action@master
